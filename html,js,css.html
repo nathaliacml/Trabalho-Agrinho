@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro Voo</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        body{
+            background-color: rgb(9, 2, 49);
+        }
+
+        #header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 15px;
+            background-color: black;
+            height: 50px;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 18px;
+            color: white;
+        }
+
+        #icon{
+            height: 30px;
+        }
+
+        .part-tit{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-end;
+
+        }
+
+        .titulo{
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 45px;
+            display: flex;
+            flex-direction: column ;
+            padding: 10px;
+            margin-top: 250px;
+            color: white;
+        }
+
+        .sub-tit{
+            font-size: 24px;
+        }
+
+        .sub-tit2{
+            font-size: 24px;
+            color: white;
+            font-family: 'Josefin Sans', sans-serif;
+            margin-top: 250px;
+            margin-left: 60px;
+        }
+
+        .img-capa{
+            height: 400px;
+        }
+
+        main{
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        #apres{
+            background-color: rgb(255, 255, 255);
+            border-radius: 40px;
+            width: 700px;
+            margin-top: 50px;
+        }
+
+        .tit-apres{
+            padding: 15px;
+            font-family: 'Roboto Condensed', sans-serif;
+
+        }
+
+        .cont-apres{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 15px;
+            font-family: 'Inconsolata', monospace;
+            font-size: 24px;
+        }
+
+        #part-2{
+            background-color: rgb(62, 45, 134);
+            border-radius: 40px; 
+            margin-left: 400px;
+            margin-top: 140px;
+        
+        }
+
+        .tit-part-2{
+            padding: 15px;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        .cont-part-2{
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            font-family: 'Inconsolata', monospace;
+            font-size: 24px;
+            color: white;
+        }
+
+        #part-3{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 10px;
+            margin-top: 50px;
+            background-color: rgb(5, 2, 29);
+            border-radius: 20px;
+            right: 10px;
+            margin-left: 30px;
+        }
+
+        .imagem{
+            height: 280px;
+        }
+
+        #texto-part-3b{
+            font-family: 'Inconsolata', monospace;
+            font-size: 24px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 20px;
+            padding: 10px;
+            margin-left: 5px;
+            color: rgb(0, 0, 0);
+            height: 280px;
+            width: 230px;
+        }
+
+        #part-4{
+            background-color: rgb(255, 255, 255);
+            border-radius: 40px;
+            width: 700px;
+            margin-top: 50px;
+            margin-left: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 15px;
+            font-family: 'Inconsolata', monospace;
+            font-size: 24px;
+        }
+
+        #voltar-topo{
+            margin-top: 100px;
+            margin-left: 470px;
+            border: 0.2px;
+            border-radius: 10px;
+            padding: 10px;
+            width: 300px;
+            font-family: 'Inconsolata', monospace;
+            background-color: rgba(140, 0, 255, 0.336);
+        }
+
+        #rodape{
+            margin-top: 50px;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 100px;
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /*Animação*/
+
+        [data-anime]{
+            opacity: 0;
+            transition: .6s;
+        }
+
+        [data-anime="left"]{
+            transform: translate3d(-50px, 0, 0);
+        }
+
+        [data-anime="right"]{
+            transform: translate3d(50px, 0, 0);
+        }
+
+        [data-anime].animate {
+            opacity: 1;
+            transform: translate3d(0px, 0px, 0px);
+        }
+    </style>
+    <link rel="shortcut icon" href="imagens/imagem.png" type="image/x-icon">
+</head>
+<body>
+    
+    <header id="header" class="menu" data-anime="left">
+            <a href="#apres">O QUE É?</a>
+            <a href="#part-2">COMO FUNCIONA?</a>
+            <a href="#part-4">EXEMPLOS</a>
+            <a href="#rodape">CONTATO</a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="imagens/instagram.png" alt="instagram" id="icon"></a>
+            <a href="https://www.facebook.com/" target="_blank"><img src="imagens/facebook.png" alt="facebook" id="icon"></a>
+    </header>
+    
+    <div class="part-tit" data-anime="left">
+        <div class="titulo">
+            <h1 data-anime="left">PRIMEIRO VOO</h1>
+            <h2 data-anime="left" class="sub-tit"> GARANTINDO O SEU FUTURO</h2>
+        </div>
+        <img src="imagens/imagem.png" alt="imagem-capa" class="img-capa" data-anime="rigth">
+        <br>
+    </div>
+    <br>
+    <h2 class="sub-tit2" data-anime="left">SAIBA MAIS:</h2>
+    
+    <main>
+        <section id="apres" data-anime="left">
+            <h2 class="tit-apres">O QUE SERIA O PRIMEIRO VOO?</h2>
+            <div class="cont-apres">
+                <p>É um projeto criado para jovens menores de idade poderem trabalharem e terem sua liberdade financeira.</p>
+                <p>Você deve pensar...não é a mesma coisa que o programa JOVEM APRENDIZ?</p>
+                <p>Bem,quase isso,pois a diferença é que faremos com que você jovem possa garantir seu dinheiro investindo-o!</p>
+                <p>E vale lembrar que,jovens que investem seu dinheiro desde já garante um futuro com estabilidade financeira.</p>
+            </div>
+        </section>
+        
+        <br>
+        
+        <section id="part-2" data-anime="right">
+            <h2 class="tit-part-2">COMO IRÁ FUNCIONAR?</h2>
+            <div class="cont-part-2">
+                <p>O programa será aplicado pra determinadas empresas que querem dar oportunidades para os jovens com menos de 18 anos.</p>
+                <p>Com base da nossa ferramenta do "Planejamento Financeiro",20% da renda(dinheiro recebido) será usado para investimento.</p>
+                <p>Assim,conforme nossa estratégia,o jovem quando completar maior idade,terá um valor de rendimnto maior que o investido.</p>
+                <p style="color: black;">Observe abaixo:</p>
+            </div>
+        
+        </section>
+       
+        <br>
+        
+        <section id="part-3" data-anime="right">
+            
+            <section id="part-3a">
+                <div>
+                    <picture>
+                        <source media="(max-width: 250px)" srcset="imagens/ferramenta-p.png" type="image/png">
+                        <source media="(max-width:650px)" srcset="imagens/ferramenta-m.png" type="image/png">
+                        <img class="imagem" src="imagens/ferramenta-m.png" alt="imagem-flexivel" >
+                    </picture>
+                </div>
+            </section>
+           
+            <section id="part-3b">
+                <div id="texto-part-3b">
+                    <h3>50%</h3>
+                    <p>Para necessidades básicas(despesas)</p>
+                    <br>
+                    <h3>20% à 30%</h3>
+                    <p>Para uso pessoal</p>
+                    <br>
+                    <h3>20%</h3>
+                    <p>Para investimentos</p></div>
+                </div>
+            </section>
+
+        </section>
+        <section id="part-4" data-anime="left">
+            <h3>ENTENDA COMO SERÁ:</h3>
+            <h4>Utilizaremos uma forma de investimento que mais está rendendo hoje para aproximadamente 3 anos conhecido como <strong>Tesouro Direto</strong>.</h4>
+            <br>
+            <p>Vamos aos números<em>(Valores simbólicos)</em>:</p>
+            <br>
+            <p>DATA DE RESGATE: <em>01/01/2025</em></p>
+            <p>VALOR INICIADO INVESTIDO: R$ 200,00</p>
+            <p>APORTES MESNSAIS: R$200,00</p>
+            <br>
+            <p>RESULTADO ESTIMADO:</p>
+            <br>
+            <p>VALOR BRUTO: R$6969,85</p>
+            <p>RENTABILIDADE BRUTA(<em>ao ano</em>):12,76%</p>
+            <p>I.R(<em>Imposto de Renda</em>):-R$164,81</p>
+            <p>TAXA DE B3(<em>Custos</em> ):-R$15,72</p>
+            <p>VALOR LÍQUIDO:R$6788,16</p>
+            <p>RENTABILIDADE LÍQUIDA(<em>ao ano</em>):10,45%</p>
+            <br>
+            <p>Ou seja,conforme o valor do salário,20% é investido em um <em>Tesouro Direto(pré-fixado)</em> e depois do tempo determinado,você terá um retorno muito maior do que guardar na poupança aquela porcentagem,que daria entorno de R$5800,00...muito baixo né?</p>
+            <p>Gostou? É uma boa oportunidade para você jovem que quer garantir desde já seu futuro financeiro.</p>
+        </section>
+        <br>
+        <button id="voltar-topo">Voltar ao topo</button>
+    </main>
+   
+    <footer id="rodape">
+        <div class="rp1" data-anime="left">
+            <h4>Colaboradores:</h4>
+            <ul>
+                <li>Pessoa 1</li>
+                <li>Pessoa 2</li>
+                <li>Pessoa 3</li>
+                <li>Pessoa 4</li>
+                <li>Pessoa 5</li>
+                <li>Pessoa 6</li>
+            </ul>
+        </div>
+        
+        <div class="rp2" data-anime="left">
+            <h4>Responsáveis:</h4>
+            <ul>
+                <li>Pessoa 1</li>
+                <li>Pessoa 2</li>
+                <li>Pessoa 3</li>
+                <li>Pessoa 4</li>
+            </ul>
+        </div>
+        
+        <div class="rp3" data-anime="left">
+            <h4>Contato:</h4>
+            <ul>
+                <li>+xx xx xxxxx-xxxx</li>
+                <li>xxxx xxx xxxx</li>
+                <li>xxxx-xxxx</li>
+                <li>xxxxx@xxxxx.com</li>
+                <li>xxxxxxxxxx.com</li>
+            </ul>
+        </div>
+    </footer>
+   
+   <script>
+        /*script para animação Scroll*/
+        const debounce = function(func, wait, immediate){
+            let timeout;
+            return function(...args) {
+                const context = this;
+                const later = function () {
+                    timeout = null;
+                    if (!immediate) func.apply(context, args);
+                };
+                const callNow = immediate && !timeout;
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+                if (callNow) func.apply(context, args);
+            };
+        };
+        
+        const target = document.querySelectorAll('[data-anime]');
+        const animationClass = 'animate';
+
+        function animeScroll() {
+            const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);
+            target.forEach(function(element){
+                if ((windowTop) > element.offsetTop){
+                    element.classList.add(animationClass);
+                }else{
+                    element.classList.remove(animationClass);
+                }
+            })
+            
+        }
+
+        animeScroll();
+
+        if(target.length) {
+            window.addEventListener('scroll', debounce(function(){
+                animeScroll();
+                console.log('nakckn')
+            }, 200 ));
+        }
+        /*Fim do script para animação Scroll*/
+
+        /*Scroll de link interno*/
+        const menuItems = document.querySelectorAll('.menu a[href^="#"]');
+
+        menuItems.forEach(item =>  {
+            item.addEventListener('click', scrollToIdOnClick);
+        })
+
+        /*função para fazer a referência ao href e ao item*/
+        function getScrollTopByHref(element) {
+            const id = element.getAttribute('href');
+            return document.querySelector(id).offsetTop;
+        }
+        
+        /*função para o clique*/
+        function scrollToIdOnClick(event) {
+            event.preventDefault();
+            const to = getScrollTopByHref(event.target) - 80;
+            scrollToPosition(to);
+        }
+
+        /*função para scroll suave*/
+        function scrollToPosition(to){
+            window.scroll({
+            top: to,
+            behavior: "smooth",
+            });
+        }
+        /*Fim do script para animação Scroll*/
+        /*função do botão = voltar ao topo*/
+        var btn = document.querySelector("#voltar-topo");
+        btn.addEventListener("click", function() {
+            window.scrollTo(0, 0);
+        });
+
+    </script>
+
+</body>
+</html>
