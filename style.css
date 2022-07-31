@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        body{
+            background-color: rgb(9, 2, 49);
+        }
+
+        #header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 15px;
+            background-color: black;
+            height: 50px;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 18px;
+            color: white;
+        }
+
+        #icon{
+            height: 30px;
+        }
+
+        .part-tit{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-end;
+
+        }
+
+        .titulo{
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 45px;
+            display: flex;
+            flex-direction: column ;
+            padding: 10px;
+            margin-top: 250px;
+            color: white;
+        }
+
+        .sub-tit{
+            font-size: 24px;
+        }
+
+        .sub-tit2{
+            font-size: 24px;
+            color: white;
+            font-family: 'Josefin Sans', sans-serif;
+            margin-top: 250px;
+            margin-left: 60px;
+        }
+
+        .img-capa{
+            height: 400px;
+        }
+
+        main{
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        #apres{
+            background-color: rgb(255, 255, 255);
+            border-radius: 40px;
+            width: 700px;
+            margin-top: 50px;
+        }
+
+        .tit-apres{
+            padding: 15px;
+            font-family: 'Roboto Condensed', sans-serif;
+
+        }
+
+        .cont-apres{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 15px;
+            font-family: 'Inconsolata', monospace;
+            font-size: 24px;
+        }
+
+        #part-2{
+            background-color: rgb(62, 45, 134);
+            border-radius: 40px; 
+            margin-left: 400px;
+            margin-top: 140px;
+        
+        }
+
+        .tit-part-2{
+            padding: 15px;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        .cont-part-2{
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            font-family: 'Inconsolata', monospace;
+            font-size: 24px;
+            color: white;
+        }
+
+        #part-3{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 10px;
+            margin-top: 50px;
+            background-color: rgb(5, 2, 29);
+            border-radius: 20px;
+            right: 10px;
+            margin-left: 30px;
+        }
+
+        .imagem{
+            height: 280px;
+        }
+
+        #texto-part-3b{
+            font-family: 'Inconsolata', monospace;
+            font-size: 24px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 20px;
+            padding: 10px;
+            margin-left: 5px;
+            color: rgb(0, 0, 0);
+            height: 280px;
+            width: 230px;
+        }
+
+        #part-4{
+            background-color: rgb(255, 255, 255);
+            border-radius: 40px;
+            width: 700px;
+            margin-top: 50px;
+            margin-left: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 15px;
+            font-family: 'Inconsolata', monospace;
+            font-size: 24px;
+        }
+
+        #voltar-topo{
+            margin-top: 100px;
+            margin-left: 470px;
+            border: 0.2px;
+            border-radius: 10px;
+            padding: 10px;
+            width: 300px;
+            font-family: 'Inconsolata', monospace;
+            background-color: rgba(140, 0, 255, 0.336);
+        }
+
+        #rodape{
+            margin-top: 50px;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 100px;
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /*Animação*/
+
+        [data-anime]{
+            opacity: 0;
+            transition: .6s;
+        }
+
+        [data-anime="left"]{
+            transform: translate3d(-50px, 0, 0);
+        }
+
+        [data-anime="right"]{
+            transform: translate3d(50px, 0, 0);
+        }
+
+        [data-anime].animate {
+            opacity: 1;
+            transform: translate3d(0px, 0px, 0px);
+        }
