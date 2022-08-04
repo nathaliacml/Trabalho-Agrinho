@@ -164,6 +164,33 @@
             font-size: 24px;
         }
 
+        #form{
+            background-color: rgb(255, 255, 255);
+            border-radius: 40px;
+            width: 700px;
+            margin-top: 50px;
+            padding: 20px;
+            font-family: 'Inconsolata', monospace;
+            font-size: 20px;
+        }
+        #nome,#email{
+            width: 600px;
+        }
+
+        #btn{
+            margin-left: 60px;
+            padding: 5px;
+            width: 150px;
+            color: white;
+            border: none;
+            border-radius: 2px;
+            background-color: rgb(83, 0, 161);
+        }
+
+        #btn:hover{
+            background-color: rgb(39, 0, 75);
+        }
+
         #voltar-topo{
             margin-top: 100px;
             margin-left: 470px;
@@ -207,7 +234,7 @@
             transform: translate3d(0px, 0px, 0px);
         }
     </style>
-    <link rel="shortcut icon" href="imagem.png" type="image/x-icon">
+    <link rel="shortcut icon" href="imagens/imagem.png" type="image/x-icon">
 </head>
 <body>
     
@@ -215,17 +242,18 @@
             <a href="#apres">O QUE É?</a>
             <a href="#part-2">COMO FUNCIONA?</a>
             <a href="#part-4">EXEMPLOS</a>
+            <a href="#form">FAÇA PARTE</a>
             <a href="#rodape">CONTATO</a>
-            <a href="https://www.instagram.com/" target="_blank"><img src="instagram.png" alt="instagram" id="icon"></a>
-            <a href="https://www.facebook.com/" target="_blank"><img src="facebook.png" alt="facebook" id="icon"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="imagens/instagram.png" alt="instagram" id="icon"></a>
+            <a href="https://www.facebook.com/" target="_blank"><img src="imagens/facebook.png" alt="facebook" id="icon"></a>
     </header>
     
     <div class="part-tit" data-anime="left">
         <div class="titulo">
             <h1 data-anime="left">PRIMEIRO VOO</h1>
-            <h2 data-anime="left" class="sub-tit"> GARANTINDO O SEU FUTURO DO JOVEM</h2>
+            <h2 data-anime="left" class="sub-tit"> GARANTINDO O SEU FUTURO</h2>
         </div>
-        <img src="imagem.png" alt="imagem-capa" class="img-capa" data-anime="rigth">
+        <img src="imagens/imagem.png" alt="imagem-capa" class="img-capa" data-anime="rigth">
         <br>
     </div>
     <br>
@@ -262,7 +290,7 @@
             <section id="part-3a">
                 <div>
                     <picture>
-                        <img class="imagem" src="ferramenta-m.png" alt="imagem-flexivel" >
+                        <img class="imagem" src="imagens/ferramenta-m.png" alt="imagem-flexivel" >
                     </picture>
                 </div>
             </section>
@@ -302,6 +330,28 @@
             <br>
             <p>Ou seja,conforme o valor do salário,20% é investido em um <em>Tesouro Direto(pré-fixado)</em> e depois do tempo determinado,você terá um retorno muito maior do que guardar na poupança aquela porcentagem,que daria entorno de R$5800,00...muito baixo né?</p>
             <p>Gostou? É uma boa oportunidade para você jovem que quer garantir desde já seu futuro financeiro.</p>
+        </section>
+        <br>
+        <section id="form" data-anime="right">
+            <h3>QUE TAL FAZER PARTE?</h3>
+            <h4>Seu apoio para o projeto é de muita importância!</h4>
+            <p>Inscreva-se agora e tenha seu futuro 100% garantido financeiramente!</p>
+            <br>
+            <form>
+                <div>
+                    <p>Nome Completo</p>
+                    <input type="text" name="Nome" id="nome" required>
+                    <br>
+                    <p>Email</p>
+                    <input type="email" name="Email" id="email" required>
+                    <br>
+                    <p>Data de Nascimento</p>
+                    <input type="date" name="Idade" id="idd">
+                    <p>Senha</p>
+                    <input type="password" name="Senha" id="senha" required>
+                    <input type="submit" value="Confirmar" id="btn">
+                </div>
+            </form>
         </section>
         <br>
         <button id="voltar-topo">Voltar ao topo</button>
